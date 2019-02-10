@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/* Declare web fonts ::LGFont, LGIcon */
+@font-face {
+    font-family:'LGSmHaL' ;font-style:normal;font-weight:200;
+    src:url('../asset/font/LGSmHaL.eot');
+    src:url('../asset/font/LGSmHaL.eot?#iefix') format('embedded-opentype'),
+    url('../asset/font/LGSmHaL.woff') format('woff'),
+    url('../asset/font/LGSmHaL.ttf') format('truetype');
+}
+@font-face {
+    font-family:'LGSmHaR';font-style:normal;font-weight:400;
+    src:url('../asset/font/LGSmHaR.eot');
+    src:url('../asset/font/LGSmHaR.eot?#iefix') format('embedded-opentype'),
+    url('../asset/font/LGSmHaR.woff') format('woff'),
+    url('../asset/font/LGSmHaR.ttf') format('truetype');
+}
+@font-face {
+    font-family:'LGSmHaB';font-style:normal;font-weight:600;
+    src:url('../asset/font/LGSmHaB.eot');
+    src:url('../asset/font/LGSmHaB.eot?#iefix') format('embedded-opentype'),
+    url('../asset/font/LGSmHaB.woff') format('woff'),
+    url('../asset/font/LGSmHaB.ttf') format('truetype');
+}
+@font-face {
+    font-family:'LGSmHaSB';font-style:normal;
+    src:url('../asset/font/LGSmHaSB.eot');
+    src:url('../asset/font/LGSmHaSB.eot?#iefix') format('embedded-opentype'),
+    url('../asset/font/LGSmHaSB.woff') format('woff'),
+    url('../asset/font/LGSmHaSB.ttf') format('truetype');
+}
+@font-face {
+    font-family:'LGEIcons';font-style:normal;font-weight:200;
+    src:url('../asset/font/LGEIcons.eot');
+    src:url('../asset/font/LGEIcons.eot?#iefix') format('embedded-opentype'),
+    url('../asset/font/LGEIcons.woff') format('woff'),
+    url('../asset/font/LGEIcons.ttf') format('truetype');
+}
+
+// RESET CSS
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, select, input {
+	margin: 0;
+	padding: 0;
+	border: 0;
+    font: inherit;
+    font-size:12px;
+    vertical-align: baseline;
+    font-family:'LGSmHaR';
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}

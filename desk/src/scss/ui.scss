@@ -1,0 +1,663 @@
+@charset "UTF-8";
+// COMMON
+.blind {
+    display:none;
+    text-indent:-9999px;
+    font-size:0;
+    height:0;
+}
+html, body {
+    width:100%;
+    height:100%;
+}
+#wrap {
+    width:100%;
+    height:100%;
+}
+
+// MAIN
+.main {
+    &:after {
+        content:"";
+        position: fixed;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background:url(../images/background.png) no-repeat center top;  
+        background-size:cover;
+        // background-attachment: fixed;
+        background-color:#000;
+        z-index:-1;
+    }
+}
+
+// MAIN HEADER
+#lg_header {
+    width:100%;
+    height:100%;
+    text-align:center;  
+    #logo {
+        display:inline-block;
+        width: 60%;
+        margin-top:25%;
+        img {
+            display:block;
+            width:100%;
+        }
+    }
+    h2 {
+        line-height: 29px;
+        font-size: 2em;
+        font-family:"LGSmHaL";
+        text-align: center;
+        color: #FFFFFF;
+        margin-top:40px;
+    }
+    p {
+        line-height: 29px;
+        font-size: 1.5em;
+        font-family:"LGSmHaL";
+        text-align: center;
+        color: #FFFFFF;
+        margin-top:20px;
+    }
+    span {
+        position: absolute;
+        left:0;
+        right:0;
+        bottom:10%;
+        line-height: 29px;
+        font-size: 1.250em;
+        font-family:"LGSmHaL";
+        text-align: center;
+        color: #FFFFFF;
+    }
+}
+
+// 메인 컨텐츠
+#content {
+    .title, .cont_list, .cont_list span, .cont_list li {
+        img { 
+            display:block; 
+            width:100%; 
+        }
+    }
+    // 프로그램 안내
+    #programInfo {
+        background:url(../images/pt_hash.png) repeat top left;
+        #zone { margin-bottom:28px; }
+    }
+    // 참가 혜택
+    #benefit {
+        #gift { margin-bottom:28px; }
+        #promotion { margin-bottom:28px; }
+    }
+    #attend {
+        background:url(../images/pt_hash.png) repeat;
+        #attendList {
+            img {
+                display: block;
+                width:100%;
+            }
+        }
+    }
+    #schedule {
+        #scheduleCont {
+            display:block;
+            width:70%;
+            margin-bottom:28px;
+        }
+        #scheduleOpt {
+            display:block;
+            background-color: #4F4F4F;
+            padding:10px 30px;
+            border-radius: 3px;
+            margin:0 auto;
+            background-size:auto 40% !important;
+        }
+    }
+}
+
+// 메인 섹션
+.info_section {
+    padding:50px 36px;
+    background-color:rgba(0,0,0,0.6);
+    .title {
+        // height:21px;
+        // text-indent:-9999px;
+        margin-bottom:16px;
+        // background:url(../images/cont_prg_tit.png) no-repeat center;
+    }
+}
+
+// 지역 선택 부분
+#location {
+    background-color:#fff;
+    padding-top:50px;
+}
+.location_area {
+    padding:0px 16px 50px;
+    .location_name {
+        position: relative;
+        padding-right:calc(100% - 80px);
+        font-family:'LGSmHaR';
+        font-size: 18px;
+        text-align: center;
+        color: #fff;
+        height:35px;
+        line-height:35px;
+        letter-spacing:0.3em;
+        text-indent:0.35em;
+        background:url(../images/location_tit_bg.png) no-repeat left top;
+        background-size:contain;
+        &:after {
+            content:"";
+            position: absolute;
+            top:0;
+            right:0;
+            width:calc(100% - 80px);
+            height:35px;
+            box-sizing:border-box;
+            border-top:solid 1px #000;
+            border-bottom:solid 1px #828282;
+            background:url(../images/location_tit_info.png) no-repeat right center;
+            background-size:100px auto;
+        }
+    }
+    .location_list {
+        border-bottom: 1px solid #000000;
+        .list {
+            position: relative;
+            padding:12px 100px 15px 4px;
+            .name, .date, .time, .loation_sub {
+                font-family:'LGSmHaR';
+                font-weight:normal;
+                font-size: 14px;
+                text-align: left;
+                color: #000;
+                letter-spacing: -0.03em;
+                line-height:25px;
+            }
+            .location_top {
+                .name {
+                    position: relative;
+                    font-weight: bold;
+                    padding-right:10px;
+                    &:after {
+                        content:"";
+                        position: absolute;
+                        top:50%;
+                        right:2px;
+                        display:block;
+                        width:1px;
+                        height:11px;
+                        margin-top:-6px;
+                        background-color:#7f7f7f;
+                    }
+                }
+                .date {
+                    font-weight: bold;
+                }
+            }
+            .loation_sub  {
+                color:#333;
+            }
+            .location_btn {
+                position: absolute;
+                top:0;
+                right:0;
+                width:100px;
+                height:100%;
+                a {
+                    position: absolute;
+                    top:0;
+                    display:block;
+                    width:50%;
+                    height:100%;
+                    text-indent:-9999px;
+                }
+                // &.on {
+                //     .btn_location_info {
+                //         animation-name:showDown;
+                //         animation-duration: 0.5s;
+                //         animation-fill-mode: forwards;
+                //         animation-timing-function: ease-in-out;
+                //     }    
+                // }   
+                .btn_location_info {
+                    left:0;
+                    background:url(../images/btn_map.png) no-repeat center;
+                    background-size:95%;
+                    // opacity: 0;
+                    // top:10px;
+                }
+                .btn_attend {
+                    right:0;
+                    background:url(../images/btn_writing.png) no-repeat center;
+                    background-size:95%;
+                }
+            }
+            border-top:solid 1px #bdbdbd;
+            &:first-child { border:0; }
+        }
+    }
+}
+
+// FOOTER
+#footer {
+    padding:40px 0;
+    background:url(../images/background.png) repeat center;
+    background-size:cover;
+    background-color:#000;
+    #footLogo {
+        width:115px;
+        height:27px;
+        background:url(../images/foot_logo.png) no-repeat center;
+        text-indent:-9999px;
+        margin:0 auto 15px;
+    }
+    #footCont {
+        width:212px;
+        height:14px;
+        background:url(../images/foot_cont.png) no-repeat center;
+        text-indent:-9999px;
+        margin:0 auto;
+    }
+    &.sub_footer {
+        position: absolute;
+        bottom:0;
+        left:0;
+        right:0;
+        padding:25px 0;
+        #footLogo {
+            margin:0 auto;
+        }
+    }
+}
+
+// SUB PAGE
+.sub {
+    position: relative;
+    min-height:100%;
+    height:auto !important;
+}
+#lg_subHeader {
+    position: relative;
+    height:68px;
+    background:url(../images/bar_top.png) no-repeat;
+    background-size:cover;
+    .sub_title {
+        position: absolute;
+        left:0;
+        right:0;
+        bottom:0;
+        line-height:44px;
+        font-family:"LGSmHaL";
+        font-weight:bold;
+        font-size: 1.5em;
+        text-align: center;
+        color: #fff;
+        letter-spacing: 0.3em;
+    }
+    .btn_back {
+        position: absolute;
+        bottom:0;
+        left:0;
+        width:44px;
+        height:44px;
+        display:block;
+        background:url(../images/btn_arrow_l_w.png) no-repeat center;
+        background-size:contain;
+        text-indent:-9999px;
+    }
+}
+.sub_content {
+    min-height:100%;
+    background-color:#fff;
+    padding:10px 15px 100px;
+}
+
+.search_result {
+    &>div {
+        padding-bottom:20px;
+    }
+    padding-bottom:10px;
+    .empty {
+        font-size:1.333em;
+        color: #333;
+        line-height:44px;
+        text-align:center;
+        padding:50px 0;
+        margin:40px 0;
+        border-bottom:1px solid #BDBDBD;
+        background:url(../images/ico_warning.png) no-repeat center top;
+    }
+}
+
+// CONTENT STYLE
+// 신청 폼 영역
+.form_cont {
+    padding:10px 0;
+    .title {
+        font-weight:bold;
+        font-size: 1.167em;;
+        color: #000;
+        line-height:28px;
+        margin-bottom:5px;
+    }
+    .opt_msg {
+        display:block;
+        font-family:'LGSmHaR';
+        font-weight:normal;
+        font-size: 12px;
+        text-align: left;
+        color: #828282;
+        line-height:34px;
+        clear: both;
+    }
+}
+// 화살표 있는 컨텐츠
+.result_type {
+    .title {
+        font-size: 1.167em;
+        color: #000;
+        line-height:36px;
+        border-bottom:solid 1px #333;
+        text-align: left;
+        font-weight:bold;
+        &:before {
+            content:">";
+            margin-right:5px;
+        }
+        &.ct {
+            text-align: center;
+        }
+    }
+    .cont {
+        font-size: 1.333em;
+        text-align: center;
+        color: #000;
+        line-height:44px;
+        border-bottom:1px solid #bdbdbd;
+    }
+    .list {
+        overflow: hidden;
+        border-bottom:1px solid #bdbdbd;
+        padding:8px 18px;
+        dt, dd {
+            font-size: 1.333em;
+            text-align: center;
+            color: #4F4F4F;
+            line-height:28px;
+            float:left;
+        }
+        dt {
+            clear: both;
+            &:after {
+                content:":";
+                margin:0 5px;
+            }
+        }
+    }
+}
+// 부 제목 있는 INPUT 영역
+.form_type_text {
+    legend {
+        font-size: 1.167em;
+        color: #828282;
+        line-height:23px;
+        margin-bottom:5px;
+    }
+    margin-bottom:10px;
+}
+// SELECT BOX STYLE
+.ct_select {
+    select {
+        border: 1px solid #BDBDBD;
+        box-sizing: border-box;
+        padding:0;
+        margin:0;
+        outline:none;
+        padding:0 1em;
+        font-size: 1.167em;
+        color: #4F4F4F;
+    }
+    &.lar {
+        select {
+            width:100%;
+            height:44px;
+        }
+    }
+}
+// INPUT STYLE
+.ct_input {
+    overflow: hidden;
+    &.x2 {
+        .ct_block {
+            width:calc(50% - 5px);
+            margin-left:10px;
+            float:left;
+            &:first-child { margin:0; }
+        }
+    }
+    &.addr {
+        .addr_search {
+            overflow: hidden;
+            .addr_number {
+                display:block;
+                width:40%;
+                height:44px;
+                border: 1px solid #BDBDBD;
+                box-sizing: border-box;
+                padding:0;
+                margin:0;
+                outline:none;
+                text-indent:1em;
+                float:left;
+            }
+            .btn_addr {
+                display:block;
+                width:30%;
+                max-width:100px;
+                height:44px;
+                line-height:44px;
+                font-size: 1.333em;
+                color: #fff;
+                line-height:44px;
+                text-align:center;
+                background-color:#333;
+                text-decoration:none;
+                margin-left:10px;
+                float:left;
+            }
+        }
+        .addr_add {
+            input {
+                margin-top:10px;
+            }
+        }
+    }
+    &.tel {
+        padding:10px 0 0;
+        overflow: hidden;
+        select {
+            margin:0; 
+            width:calc(34% - 8px);
+            height:44px;
+            padding:0;
+            box-sizing:border-box;
+            border: 1px solid #BDBDBD;
+            font-size: 1.167em;
+            color: #4F4F4F;
+            text-indent:1em;
+            float:left;
+        }
+        input {
+            width:calc(33% - 6px);
+            height:44px;
+            margin-left:10px;
+            padding:0;
+            box-sizing:border-box;
+            border: 1px solid #BDBDBD;
+            text-align:center;
+            color: #4F4F4F;
+            float:left;
+        }
+    }
+    .ct_inp_a {
+        input {
+            margin:0;
+            padding:0;
+            text-indent:1em;
+            width:100%;
+            height:44px;
+            border: 1px solid #BDBDBD;
+            box-sizing: border-box;
+            font-size: 1.167em;
+            color: #4F4F4F;
+        }
+    }
+}
+// 체크 박스 메시지
+.agree_check {
+    text-align:center;
+    margin:10px 0;
+    .wrtie_agree {
+        display:inline-block;
+        width:16px;
+        height:16px;
+        border: 1px solid #BDBDBD;
+        box-sizing: border-box;
+        vertical-align:middle;
+        margin-right:5px;
+    }
+    .wrtie_agree_label {
+        font-family:'LGSmHaR';
+        font-weight:bold;
+        font-size: 1em;
+        text-align: left;
+        color: #000;
+        line-height:44px;
+        vertical-align:middle;
+    }
+}
+// 버튼
+.btn_submit {
+    display:block;
+    width:60%;
+    height:44px;
+    line-height:44px;
+    max-width:182px;
+    font-family:'LGSmHaR';
+    font-weight:normal;
+    font-size: 1.333em;
+    text-align: center;
+    text-decoration:none;
+    color: #fff;
+    line-height:44px;
+    vertical-align:middle;
+    background-color:#333;
+    margin:0 auto;
+}
+// 검색 버튼
+.btn_sarach {
+    display:block;
+    width:100%;
+    height:44px;
+    line-height:44px;
+    font-family:'LGSmHaR';
+    font-weight:normal;
+    font-size: 1.333em;
+    text-align: center;
+    text-decoration:none;
+    color: #fff;
+    line-height:44px;
+    vertical-align:middle;
+    background-color:#333;
+    margin:10px auto;
+    &:before {
+        content:"";
+        display:inline-block;
+        width:16px;
+        height:16px;
+        vertical-align:middle;
+        margin-right:5px;
+        background:url(../images/ico_research.png) no-repeat top left;
+        background-size:contain;
+    }
+}
+// 신청확인 버튼
+.btn_check {
+    position: fixed;
+    bottom:10%;
+    right:2%;
+    display:block;
+    width:54px;
+    height:54px;
+    text-indent:-9999px;
+    z-index:1000;
+    background:url(../images/btn_research.png) no-repeat;
+}
+
+// 완료 페이지
+#complete {
+    .caption {
+        font-family:'LGSmHaR';
+        font-weight:bold;
+        font-size: 1.167em;
+        text-align: center;
+        text-decoration:none;
+        color: #333;
+        margin:30px 0;
+    }
+}
+
+
+
+.check_msg {
+    font-weight:bold;
+    font-size: 20px;
+    text-align: center;
+    text-decoration:none;
+    padding-top:90px;
+    margin:50px 0;
+    background:url(../images/ico_check.png) no-repeat center top;
+    background-size:60px auto;
+}
+
+
+
+// EFFECT
+.eft_scroll {
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:35%;
+    width:36px;
+    margin:0 auto;
+}
+
+/* 스크롤다운 */
+.scroll_down {position:absolute;width:320px;text-align:center;bottom:50px;left:50%;margin-left:-160px;z-index:1;}
+.chevron_wrap {margin:0 auto;position:relative;width:30px;height:30px;}
+.chevron_wrap .chevron {
+    position:absolute;
+    width:36px;height:15px;opacity:0;transform:scale3d(0.5, 0.5, 0.5);
+    animation:move 3s ease-out infinite;
+    background:url(../images/ic_arrow_d_w.png) no-repeat center top;
+    background-size:contain;
+}
+.chevron_wrap .chevron:first-child {animation:move 3s ease-out 1s infinite;}
+.chevron_wrap .chevron:nth-child(2) {animation:move 3s ease-out 2s infinite;}
+
+// 가로 모드
+@media screen and (min-width:1000px) {
+    #lg_header {
+        #logo {
+            margin-top:20%;
+            background:url(../images/logo_g8_w.png) no-repeat center;
+        }
+    }
+}
+
